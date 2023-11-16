@@ -1,0 +1,62 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../public/fonts/Gilroy-Black.ttf');
+	weight: 400
+}
+
+.catalogs{
+	margin-left: 140px;
+	margin-right: 140px;
+	padding-top: 20px;
+	.catalogs__text{
+		color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		font-family: myFirstFont;
+	}
+
+	.catalogs__content{
+		width: 1200px;
+
+		.catalogs__category{
+
+			img{
+				z-index:-1;
+			}
+			.category__item{
+
+				width: 300px;
+				margin-top: -40px;
+				z-index: 9999;
+				p{
+					color: white;
+					background-color: rgba(255, 255, 255, 0.1);
+
+				}
+			}
+		}
+	}
+}
+
+.container {
+	position: relative;
+	display: inline-block;
+	margin: 20px 26px 20px 0px;
+}
+
+.image {
+	display: block;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(6, 5, 5, 0.5);
+	padding: 10px;
+	color: white;
+	font-family: myFirstFont;
+}
+

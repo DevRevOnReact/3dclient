@@ -1,0 +1,158 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../../public/fonts/Gilroy-Black.woff');
+	font-weight: 400
+}
+
+@font-face {
+	font-family: myItalic;
+	src: url('./../../../../../public/fonts/Gilroy-BlackItalic.eot');
+	font-weight: 400
+}
+.popular{
+	margin-top: 100px;
+	width: 100%;
+	height: 652px;
+	background: #242424;
+
+	.popular__title{
+		padding-top: 52px;
+		color: #FFF;
+		font-family: myFirstFont;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		margin-left: 140px;
+	}
+
+	.popular__container{
+		display:flex;
+		flex-direction: row;
+		margin-left: 140px;
+		margin-top: 40px;
+		.popular__cards {
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+
+		}
+	}
+}
+
+.popular__card {
+	display: flex;
+	flex-direction: column;
+	background: #0D0D0D;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	.like__container {
+		display: flex;
+		flex-direction: row;
+		width: 260px;
+		justify-content: flex-end;
+		position: absolute;
+		.like {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+
+	}
+	.populate__category {
+		color: #FFF;
+		font-family: myFirstFont;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		padding-top: 14px;
+		padding-left: 22px;
+	}
+
+	.popular__content {
+		display: flex;
+		flex-direction: column;
+		padding-left: 22px;
+		padding-top: 23px;
+
+		.popular__tag {
+			color: #FFF;
+			font-family: myItalic;
+			font-size: 18px;
+			font-style: italic;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.popular__description {
+			color: #FFF;
+			font-family: myFirstFont;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+	}
+
+	.popular__score {
+		display: flex;
+		flex-direction: row;
+		gap: 7px;
+		align-items: center;
+		padding-top: 14px;
+		padding-left: 22px;
+
+		.populate__score_label {
+			color: #FFF;
+			font-family: myFirstFont;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+	}
+
+	.popular__card_prices {
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		padding-top: 30px;
+		padding-left: 22px;
+		align-items: center;
+		padding-bottom: 33px;
+
+		.popular__card_price {
+			color: #27AE60;
+			font-family: myFirstFont;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		.popular__card_button {
+			display: flex;
+			width: 124px;
+			height: 36px;
+			padding: 25px 34px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			background: var(--Style, #FF2750);
+			box-shadow: 0px 0px 30px 0px #FF2750;
+			cursor: pointer;
+
+			p {
+				color: #FFF;
+				text-align: center;
+				font-family: myFirstFont;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+		}
+	}
+}
+

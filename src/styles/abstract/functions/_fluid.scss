@@ -1,0 +1,63 @@
+@use 'sass:math';
+@use './decimalRound' as *;
+
+//===========================================
+//============= fluid =======================
+//===========================================
+
+// Функция fluid для создания гибких значений (размера шрифта, отступов и т.д.), изменяющихся пропорционально между заданными минимальными и максимальными размерами в зависимости от размера экрана
+// $minSize: минимальное значение (обычно для маленьких экранов)
+// $maxSize: максимальное значение (обычно для больших экранов)
+// $units: единицы измерения для рассчитываемого значения (по умолчанию 'vw')
+// $minWidth: минимальная ширина экрана (по умолчанию 375)
+// $maxWidth: максимальная ширина экрана (по умолчанию 1440)
+@function fluid($minSize, $maxSize, $units: 'vw', $minWidth: 375, $maxWidth: 1440) {
+  // 1. Перевод всех входных значений в rem, делим их на базовый размер шрифта (16)
+  $minSize: math.div($minSize, 16);
+  $maxSize: math.div($maxSize, 16);
+  $maxWidth: math.div($maxWidth, 16);
+  $minWidth: math.div($minWidth, 16);
+
+  // 2. Вычисление углового коэффициента ($slope) и точки пересечения с осью Y ($yAxisIntersection) для линейной функции, описывающей изменение значения в зависимости от размера экрана
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  // 3. Формирование выражения для предпочтительного значения ($preferredValue) с использованием углового коэффициента, точки пересечения с осью Y и указанных единиц измерения
+  $preferredValue: '#{decimalRound($yAxisIntersection,3)}rem + #{decimalRound(($slope*100),3) }#{$units}';
+
+  // 4. Округление значений $minSize и $maxSize до трех знаков после запятой и конвертирование их в rem
+  $minSize: decimalRound($minSize, 3) * 1rem;
+  $maxSize: decimalRound($maxSize, 3) * 1rem;
+
+  // 5. Возвращение значения в виде CSS функции clamp, которая ограничивает рассчитанное значение между минимальным и максимальным размерами
+  @return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
+}
+
+//===========================================
+//============= rem em ======================
+//===========================================
+
+@function rem($size) {
+	$remValue: math.div($size, 16);
+	$roundedValue: decimalRound($remValue, 3) * 1rem;
+
+	@return $roundedValue;
+}
+
+@function em($size) {
+	$remValue: math.div($size, 16);
+	$roundedValue: decimalRound($remValue, 3) * 1em;
+
+	@return $roundedValue;
+}
+
+//===========================================
+//============= relative ====================
+//===========================================
+
+@function relative($size, $width: 1440) {
+	$relativeValue: math.div($size, $width);
+	$roundedValue: decimalRound($relativeValue * 100, 3);
+
+	@return $roundedValue;
+}

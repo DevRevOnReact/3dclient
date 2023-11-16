@@ -1,0 +1,389 @@
+@font-face {
+	font-family: myFirst;
+	src: url('./../../../../public/fonts/Gilroy-Light.woff');
+	weight: 400
+}
+
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../public/fonts/Gilroy-Black.woff');
+	weight: 400
+}
+
+.account {
+	margin-top: 132px;
+	margin-left: 140px;
+	margin-right: 140px;
+	background: #242424;
+	color: white;
+	width: 1161px;
+
+	.accountTitle{
+		padding-top:47px ;
+		color: #FFF;
+		font-family: myFirstFont;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.account__container{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 80px;
+		padding-top: 35px;
+		padding-bottom: 55px;
+		.account__block1{
+			display: flex;
+			flex-direction: row;
+
+			.account__buttons{
+				display: flex;
+				gap: 30px;
+
+				.account__button{
+					display: flex;
+					width: 163px;
+					height: 50px;
+					padding: 47.581px 64.71px;
+					justify-content: center;
+					align-items: center;
+					gap: 95.161px;
+					flex-shrink: 0;
+					border-radius: 19.032px;
+					background: #FF2750;
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;
+					cursor: pointer;
+					p{
+						color: #FFF;
+						text-align: center;
+						font-family: myFirstFont;
+						font-size: 21px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+				}
+			}
+		}
+
+		.account__block2{
+			.account__image{
+				width: 114px;
+				height: 114px;
+				border-radius: 200px;
+				border: 2px solid var(--Style, #FF2750);
+			}
+
+			p{
+				color: #FFF;
+				padding-top: 21px;
+				text-align: center;
+				font-family: myFirstFont;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+
+		.account__block3{
+			display: flex;
+			flex-direction: row;
+			.account__buttons{
+				display: flex;
+				gap: 30px;
+
+				.account__button{
+					display: flex;
+					width: 163px;
+					height: 50px;
+					padding: 47.581px 64.71px;
+					justify-content: center;
+					align-items: center;
+					gap: 95.161px;
+					flex-shrink: 0;
+					border-radius: 19.032px;
+					background: #FF2750;
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;
+					cursor: pointer;
+					p{
+						color: #FFF;
+						text-align: center;
+						font-family: myFirstFont;
+						font-size: 21px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+				}
+				.account__button1{
+					display: flex;
+					width: 163px;
+					height: 50px;
+					padding: 47.581px 64.71px;
+					justify-content: center;
+					align-items: center;
+					gap: 95.161px;
+					flex-shrink: 0;
+					border-radius: 19.032px;
+					border: 1.903px solid var(--Style, #FF2750);
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;
+					background: rgba(0,0,0,0);
+					cursor: pointer;
+					p{
+						color: #FFF;
+
+						text-align: center;
+						font-family: myFirstFont;
+						font-size: 21px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+.userData{
+	margin-top: 132px;
+	background: #242424;
+	color: white;
+	width: 100vw;
+
+	.userData__container{
+		display: flex;
+		flex-direction: column;
+		margin-left: 140px;
+		margin-right: 140px;
+		.userData__buttons_state{
+			display: flex;
+			flex-direction: row;
+			padding-left:58px;
+			padding-top:68px ;
+			padding-bottom: 58px;
+
+			.userData__button_public{
+				display: flex;
+				width: 164px;
+				height: 68px;
+				padding: 37.097px 50.452px 40px 50.452px;
+				justify-content: center;
+				align-items: center;
+				gap: 74.194px;
+				flex-shrink: 0;
+				background: rgba(0,0,0,0);
+				cursor: pointer;
+				p{
+					color: #FF2750;
+					text-align: center;
+					font-family: myFirstFont;
+					font-size: 26.71px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+			.userData__button_private{
+				display: flex;
+				width: 164px;
+				height: 68px;
+				padding: 37.097px 50.452px 40px 50.452px;
+				justify-content: center;
+				align-items: center;
+				gap: 74.194px;
+				flex-shrink: 0;
+				border-radius: 14.839px;
+				background: var(--141414, #0D0D0D);
+				cursor: pointer;
+				p{
+					color: #FF2750;
+					text-align: center;
+					font-family: myFirstFont;
+					font-size: 26.71px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+			.userData__button_payment{
+				display: flex;
+				width: 164px;
+				height: 68px;
+				padding: 37.097px 50.452px 40px 50.452px;
+				justify-content: center;
+				align-items: center;
+				gap: 74.194px;
+				flex-shrink: 0;
+				background: rgba(0,0,0,0);
+				cursor: pointer;
+				p{
+					color: #FF2750;
+					text-align: center;
+					font-family: myFirstFont;
+					font-size: 26.71px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+		}
+		.userData_description{
+			display: flex;
+			flex-direction: row;
+			padding-left:102px;
+			align-items: center;
+			gap: 12px;
+			.line{
+				width: 2px;
+				height: 28px;
+				background: var(--Style, #FF2750);
+			}
+
+			.userData_text{
+				color: var(--7-d-7-d-7-d, #7D7D7D);
+				font-family: myFirst;
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 200.5%; /* 34.085px */
+			}
+		}
+		.userData_description2{
+			display: flex;
+			flex-direction: row;
+			padding-left:102px;
+			align-items: center;
+			gap: 12px;
+			padding-top:53px ;
+			.line{
+				width: 2px;
+				height: 46px;
+				background: var(--Style, #FF2750);
+			}
+
+			.userData_text{
+				color: var(--7-d-7-d-7-d, #7D7D7D);
+				font-family: myFirst;
+				font-size: 17px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 200.5%; /* 34.085px */
+			}
+		}
+		.userData_forms{
+			display: flex;
+			flex-direction: column;
+		.userData_form{
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+			padding-left: 101px;
+			padding-top: 111px;
+
+			.form__input_left, .form__input_right{
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				input{
+					display: flex;
+					width: 360px;
+					height: 68px;
+					padding: 37.097px 50.452px 40px 35px;
+					align-items: center;
+					gap: 74.194px;
+					flex-shrink: 0;
+					border-radius: 14.839px;
+				background: var(--141414, #0D0D0D);
+					outline:none;
+					border: none;
+					&::placeholder{
+						color: var(--7-d-7-d-7-d, #7D7D7D);
+						font-family: myFirstFont;
+						font-size: 17px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+					color: var(--7-d-7-d-7-d, #7D7D7D);
+					font-family: myFirstFont;
+					font-size: 17px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+
+				}
+			}
+		}
+		}
+		.userData_buttons_main{
+			display: flex;
+			flex-direction: row;
+			gap: 35px;
+			padding-left: 101px;
+			padding-top: 54px;
+			padding-bottom: 148px;
+			.userData__button_save{
+				display: flex;
+				width: 163px;
+				height: 50px;
+				padding: 47.581px 64.71px;
+				justify-content: center;
+				align-items: center;
+				gap: 95.161px;
+				flex-shrink: 0;
+				border-radius: 19.032px;
+				background: #FF2750;
+				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				p{
+					color: #FFF;
+					text-align: center;
+					font-family: myFirstFont;
+					font-size: 21px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+			.userData__button_discard{
+				display: flex;
+				width: 195px;
+				height: 50px;
+				padding: 47.581px 64.71px;
+				justify-content: center;
+				align-items: center;
+				gap: 95.161px;
+				flex-shrink: 0;
+				background: 0,0,0,0;
+				border-radius: 19.032px;
+				border: 1.903px solid var(--Style, #FF2750);
+				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				p{
+					color: #FFF;
+					text-align: center;
+					font-family: myFirstFont;
+					font-size: 21px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+			}
+
+		}
+	}
+}
+
+

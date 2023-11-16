@@ -1,0 +1,19 @@
+@mixin centering {
+	display: grid;
+	place-content: center;
+}
+
+@mixin focusRing {
+	outline: var(--grayLines) auto 2px;
+	outline-offset: 4px;
+}
+
+@mixin container {
+	overflow-x: hidden;
+	padding-inline: var(--space-80);
+}
+
+%container {
+	// overflow-x: hidden;
+	padding-inline: var(--space-80);
+}

@@ -1,0 +1,4 @@
+// для инжекта в каждый файл через next config
+@forward './abstract';
+@forward './template';
+@forward './variables';

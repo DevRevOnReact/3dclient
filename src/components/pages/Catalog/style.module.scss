@@ -1,0 +1,221 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../public/fonts/Gilroy-Black.ttf');
+	weight: 400
+}
+
+.catalog{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.catalog__layout{
+	display: flex;
+	flex-direction: row;
+	margin-left: 140px;
+	margin-right: 140px;
+}
+
+.catalog__main{
+	width: fluid(340, 760);
+	background: var(--242424, #242424);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.catalog__sidebar{
+	width: fluid(240, 361);
+	flex-shrink: 0;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	background: var(--242424, #242424);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	margin-left: 39px;
+}
+
+.catalog__section{
+	display: flex;
+	flex-direction: column;
+}
+
+.catalog__content{
+	display: flex;
+	flex-direction: row;
+	padding-top: 53px;
+	padding-left: 60px;
+	padding-bottom:53px ;
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.catalog__options{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+	padding-right: 20px;
+}
+
+.catalog__item{
+	border-radius: 4px;
+	background: #0D0D0D;
+	display: flex;
+	width: 32px;
+	height: 32px;
+	padding: 4px;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.catalog__img{
+	width: 220px;
+	height: 188px;
+	background:white ;
+}
+
+.catalog__text{
+	display: flex;
+	flex-direction: column;
+	padding-left: 32px;
+	justify-content: center;
+}
+
+.catalog__text_title{
+	color: #FFF;
+	font-family: myFirstFont;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: normal;
+	padding-bottom: 7px;
+}
+
+.catalog__text_description{
+	color: #FFF;
+	font-family: myFirstFont;
+	font-size: fluid(14, 18);
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	padding-bottom: 24px;
+}
+
+.catalog__text_price{
+	color: var(--Green-2, #27AE60);
+	font-family: myFirstFont;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.catalog__sidebar_content{
+	display: flex;
+	flex-direction: column;
+}
+
+.catalog__sidebar_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.catalog__sidebar_title{
+	padding-top: 53px;
+	color: #FFF;
+
+	text-align: center;
+	font-family: myFirstFont;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.catalog__sidebar_price{
+	display: flex;
+	width: 240px;
+	height: 68px;
+	padding: 37.097px 50.452px 40px 50.452px;
+	justify-content: center;
+	align-items: center;
+	gap: 74.194px;
+	flex-shrink: 0;
+	border-radius: 14.839px;
+	background:#0D0D0D;
+	margin-top: 37px;
+	p{
+		color:  #27AE60;
+		text-align: center;
+		font-family: myFirstFont;
+		font-size: 26.71px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+}
+
+.catalog__sidebar_button{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 240px;
+	height: 69px;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 19.032px;
+	background: #FF2750;
+	cursor: pointer;
+	box-shadow: 0px 0px 57.09677px 0px #FF2750;
+	margin-top: 54px;
+	padding-right: 60px;
+	padding-left: 60px;
+	p{
+		color: #FFF;
+		text-align: center;
+		font-family: myFirstFont;
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		display: flex;
+		width: 201px;
+		flex-wrap: wrap;
+	}
+}
+
+.catalog__sidebar_section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.catalog__sidebar_footer{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.catalog__sidebar_text{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 105px;
+	padding-bottom: 64px;
+
+	a{
+		color: #FFF;
+
+		font-family: myFirstFont;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		text-decoration-line: underline;
+	}
+}
