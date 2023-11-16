@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import type {SetStateAction} from 'react';
-
+import Link from "next/link";
 import cx from './style.module.scss'
 import CatalogItem from "@/pages/Catalogs/CatalogsItem";
 
 import {popularData} from "@/pages/ui/Popular/config";
 import PopularItem from "@/pages/ui/Popular/PopularItem";
 import type {SearchResultType} from "@/pages/ui/Search/types";
+import Image from "next/image";
 
 interface SearchProps {
 	data: Array<{
@@ -55,24 +56,25 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 			item.description.toLowerCase().includes(searchTerm.toLowerCase())
 		);
 
-		const results = [...catalogResults, ...popularResults];
+		const results = [...catalogResults, ...popularResults].slice(0, 3);
 
 		setSearchResults(results);
 		onSearchResults(results); // Вызываем функцию обратного вызова с найденными результатами
 
 		// Генерируем подсказки на основе введенного текста
 		const matchingCatalogSuggestions = data
-			.filter((item) =>
-				item.overlayText.toLowerCase().startsWith(searchTerm.toLowerCase())
-			)
-			.map((item) => item.overlayText);
-
-		const matchingPopularSuggestions = popularData
-			.filter((item) =>
-				item.description.toLowerCase().startsWith(searchTerm.toLowerCase())
-			)
-			.map((item) => item.description);
-
+		.filter((item) =>
+		item.overlayText.toLowerCase().includes(searchTerm.toLowerCase())
+	  )
+	  .map((item) => item.overlayText)
+	  .slice(0, 3);
+	
+	const matchingPopularSuggestions = popularData
+	  .filter((item) =>
+		item.description.toLowerCase().includes(searchTerm.toLowerCase())
+	  )
+	  .map((item) => item.description)
+	  .slice(0, 3);
 		const suggestions = [...matchingCatalogSuggestions, ...matchingPopularSuggestions];
 
 		setSuggestions(suggestions);
@@ -86,22 +88,44 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 
 	const search = (value: string) => {
 		const results = data.filter((item: { overlayText: string; }) =>
-			item.overlayText.toLowerCase().includes(value.toLowerCase())
+		  item.overlayText.toLowerCase().includes(value.toLowerCase())
 		);
+	  
+		const popularResults = popularData.filter((item) =>
+		  item.description.toLowerCase().includes(value.toLowerCase())
+		);
+	  
+		const combinedResults = [...results, ...popularResults].slice(0, 3);
+	  
+		setSearchResults(combinedResults);
+		onSearchResults(combinedResults); // Call the callback function with the combined results
+	  };
 
-		setSearchResults(results);
-		onSearchResults(results); // Вызываем функцию обратного вызова с найденными результатами
-	};
-
-	const clearSearchResults = () => {
+	  const clearSearchResults = () => {
 		setSearchTerm('');
 		setSearchResults([]);
 		setSuggestions([]);
-		onSearchResults([]); // Вызываем функцию обратного вызова с пустым массивом результатов
-	};
+		onSearchResults([]);
+	  };
 
+	  const handleLinkClick = () => {
+		clearSearchResults();
+	  };
+	
 	return (
 		<div>
+			<div style={{display: 'flex'}}>
+				<Image
+						alt="fsfdsf"
+						src="/images/LogoFull.png"
+						width={260}
+						height={56}
+						style={{
+							objectFit: 'cover',
+							pointerEvents: 'none',
+				
+						}}
+					/>
 			<input
 				type="text"
 				value={searchTerm}
@@ -109,6 +133,7 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 				placeholder="Search..."
 				className={cx('input')}
 			/>
+			</div>
 
 			{searchTerm && (
 				<div className={cx('autocomplete')}>
@@ -125,17 +150,28 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 			)}
 
 			{searchTerm && searchResults.length > 0 ? (
+				<div className={cx('catalogs__contents')}>
 				<div className={cx('catalogs__content')}>
 					{searchResults.map((result, index) => (
 						result.overlayText ? (
-							<CatalogItem item={result} key={index} />
+							<Link href="/catalogs" key={index} onClick={handleLinkClick}>
+								<CatalogItem item={result} key={index} />
+							</Link>
 						) : (
-							<PopularItem item={result} key={index} onOpenModal={() => true} />
+							<div key={index} style={{
+								display:'flex',
+								flexDirection:'row',
+							}}>
+									<Link href="/catalog" key={index} onClick={handleLinkClick}>
+										<PopularItem item={result} key={index} onOpenModal={() => true} />
+									</Link>
+							</div>
 						)
 					))}
 				</div>
+				</div>
 			) : (
-				<p>fd</p>
+				<p></p>
 			)}
 		</div>
 	);

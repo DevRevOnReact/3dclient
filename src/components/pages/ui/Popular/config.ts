@@ -5,7 +5,7 @@ export const popularData = [
 		imgWidth: 260,
 		imgHeight: 188,
 		tag: "Easy Save",
-		description: "3d-персонаж монстр",
+		description: "3d-монстр",
 		score: 346,
 		category: "Категория",
 		price: "$ 49.99"
@@ -16,7 +16,7 @@ export const popularData = [
 		imgWidth: 260,
 		imgHeight: 188,
 		tag: "Easy Save",
-		description: "3d-персонаж монстр",
+		description: "3d-горилла монстр",
 		score: 346,
 		category: "Категория",
 		price: "$ 49.99"
@@ -27,7 +27,7 @@ export const popularData = [
 		imgWidth: 260,
 		imgHeight: 188,
 		tag: "Easy Save",
-		description: "3d-персонаж монстр",
+		description: "3d-медведь монстр",
 		score: 346,
 		category: "Категория",
 		price: "$ 49.99"

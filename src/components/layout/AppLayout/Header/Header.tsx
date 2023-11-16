@@ -23,12 +23,6 @@ export const Header = () => {
 		<header>
 			<div className={cx('header__main')}>
 				<div className={cx('header__left')}>
-					<Image
-						alt="fsfdsf"
-						src="/images/logo.svg"
-						width={260}
-						height={188}
-					/>
 					<Search data={catalogsData} onSearchResults={handleSearchResults}
 									popularData={popularData}/>
 				</div>

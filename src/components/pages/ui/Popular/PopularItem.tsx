@@ -7,6 +7,7 @@ import type {PopulateItemProps} from "@/pages/ui/Popular/types";
 import cx from './style.module.scss';
 
 const PopulateItem: React.FC<PopulateItemProps> = ({ item, onOpenModal }) => (
+	
 	<div className={cx('popular__card')}>
 		<Image
 			alt={item.alt ?? 'defaultImageSrc'}
@@ -37,7 +38,7 @@ const PopulateItem: React.FC<PopulateItemProps> = ({ item, onOpenModal }) => (
 				<p>+&nbsp;add&nbsp;to&nbsp;cart</p>
 			</button>
 		</div>
-	</div>
+</div>
 );
 
 
