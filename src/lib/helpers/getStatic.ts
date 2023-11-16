@@ -11,7 +11,7 @@ interface GetStaticPropsContextReduced {
 }
 
 interface I18nNamespaces {
-	common: string;
+	common: [];
 }
 
 export const getI18nProps = async (
