@@ -4,6 +4,6 @@ import {Catalog} from "@/pages/Catalog";
 
 const CatalogPage = () => <Catalog />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['catalog']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default CatalogPage;

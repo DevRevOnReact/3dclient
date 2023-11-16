@@ -6,6 +6,6 @@ import { Second } from '@/pages/Second';
 
 const SecondPage = () => <Second />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['second']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default SecondPage;

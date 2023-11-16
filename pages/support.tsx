@@ -4,6 +4,6 @@ import {Support} from "@/pages/Support";
 
 const SupportPage = () => <Support />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['support']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default SupportPage;

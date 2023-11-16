@@ -4,6 +4,6 @@ import {Account} from "@/pages/Account";
 
 const AccountPage = () => <Account />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['account']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default AccountPage;

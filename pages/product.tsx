@@ -4,6 +4,6 @@ import {Product} from "@/pages/Product";
 
 const ProductPage = () => <Product />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['product']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default ProductPage;

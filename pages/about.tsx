@@ -4,6 +4,6 @@ import {About} from "@/pages/About";
 
 const AboutPage = () => <About />;
 
-export const getStaticProps: GetStaticProps = makeStaticProps(['about']);
+export const getStaticProps: GetStaticProps = makeStaticProps(['common']);
 
 export default AboutPage;
