@@ -1,14 +1,14 @@
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import type {PopulateItemProps} from "@/pages/ui/Popular/types";
 
 import cx from './style.module.scss';
 
-const PopulateItem: React.FC<PopulateItemProps> = ({ item, onOpenModal }) => (
+const PopulateItem: React.FC<PopulateItemProps> = ({ item, onOpenModal, backgroundColor }) => (
 	
-	<div className={cx('popular__card')}>
+	<div className={cx('popular__card')} style={{background: backgroundColor}}>
 		<Image
 			alt={item.alt ?? 'defaultImageSrc'}
 			className={cx('catalog__img')}

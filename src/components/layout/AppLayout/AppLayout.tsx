@@ -17,7 +17,7 @@ export function AppLayout({ children }: PropsWithChildren) {
 		<div className={cx('container', inter.variable)}>
 			<Head>
 				<title>Create Next App</title>
-				<meta name="description" content="Chulakov template next js" />
+				<meta name="description" content="template next js" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />

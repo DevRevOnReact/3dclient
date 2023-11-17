@@ -1,0 +1,66 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../../public/fonts/Gilroy-Black.ttf');
+	weight: 400
+}
+
+@font-face {
+	font-family: myFirst;
+	src: url('./../../../../../public/fonts/Gilroy-Light.woff');
+	weight: 400
+}
+
+
+.custom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:50px ;
+    padding-bottom:50px ;
+  
+  .custom__title {
+    color: #FFF;
+    font-family: myFirstFont;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .custom__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        padding: 25px 34px;
+        border-radius: 10px;
+        background: #FF2750;
+        box-shadow: 0px 0px 30px 0px #FF2750;
+        margin: 0 10px;
+        font-family: myFirstFont;
+        color: #FFF;
+        cursor: pointer;
+        display: flex;
+        padding: 25px 34px;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 36px;
+    }
+
+}
+  
+  .link {
+    color: var(--Style, #FF2750);
+    text-align: right;
+    font-family: myFirstFont;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+}

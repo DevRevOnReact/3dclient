@@ -11,4 +11,5 @@ export interface PopulateItemProps {
 		price?: string;
 	};
 	onOpenModal: () => void;
+	backgroundColor:string;
 }

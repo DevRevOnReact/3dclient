@@ -1,0 +1,160 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../../public/fonts/Gilroy-Black.ttf');
+	weight: 400
+}
+
+@font-face {
+	font-family: myFirst;
+	src: url('./../../../../../public/fonts/Gilroy-Light.woff');
+	weight: 400
+}
+
+.footer{
+    padding-top: 82px;
+    margin-left: 110px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+    .footer__lists{
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        padding-left: 158px;
+
+        .footer__list1{
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                color: #FFF;
+                font-family: myFirstFont;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            ul{
+                li{
+                    padding-top:10px ;
+                    color: #FFF;
+                    font-family: myFirst;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .footer__list2{
+            display: flex;
+            flex-direction: column;
+            h1{
+                color: #FFF;
+                font-family: myFirstFont;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            ul{
+                li{
+                    padding-top:10px ;
+                    color: #FFF;
+                    font-family: myFirst;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    .footer__follows{
+        margin-left: 285px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .footer__follow1{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+
+            h1{
+                color: #FFF;
+                font-family: myFirstFont;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .footer__follow2{
+            flex-direction: column;
+
+            h1{
+                color: #FFF;
+                font-family: myFirstFont;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            
+            .follow__buttons{
+                display: flex;
+                flex-direction: row;
+                padding-top: 10px;
+                gap: 10px;
+                .button1{
+                    display: flex;
+                    width: 86px;
+                    height: 36px;
+                    padding: 25px 34px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 50px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    background: #FF2750;
+                    box-shadow: 0px 0px 30px 0px #FF2750;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: myFirstFont;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                .button2{
+                    display: flex;
+                    width: 86px;
+                    height: 36px;
+                    padding: 25px 34px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 50px;
+                    flex-shrink: 0;
+                    color: #0D0D0D;
+                    text-align: center;
+                    font-family: myFirstFont;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-radius: 10px;
+                    background: #F2F2F2;
+                }
+              
+            }
+
+        }  
+    }
+}

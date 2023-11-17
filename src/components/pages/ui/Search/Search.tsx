@@ -163,7 +163,7 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 								flexDirection:'row',
 							}}>
 									<Link href="/catalog" key={index} onClick={handleLinkClick}>
-										<PopularItem item={result} key={index} onOpenModal={() => true} />
+										<PopularItem item={result} key={index} onOpenModal={() => true} backgroundColor={''} />
 									</Link>
 							</div>
 						)

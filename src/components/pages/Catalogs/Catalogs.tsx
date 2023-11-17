@@ -4,6 +4,7 @@ import CatalogItem from "@/pages/Catalogs/CatalogsItem";
 import { catalogsData } from "@/pages/Catalogs/config";
 
 import cx from './style.module.scss';
+import Link from "next/link";
 
 const Catalogs = () => {
 	const [searchResults, setSearchResults] = useState([]);
@@ -19,11 +20,19 @@ const Catalogs = () => {
 				<div className={cx('catalogs__content')}>
 					{searchResults.length > 0 ? (
 						searchResults.map((item, index) => (
-							<CatalogItem key={index} item={item} />
+						<>
+							<Link href={"/product"}>
+							<CatalogItem key={index} item={item}  />
+							</Link>
+						</>
 						))
 					) : showAllContent ? (
 						catalogsData.map((item, index) => (
-							<CatalogItem key={index} item={item} />
+							<>
+							<Link href={"/product"}>
+							<CatalogItem key={index} item={item}  />
+							</Link>
+							</>
 						))
 					) : (
 						<p></p>

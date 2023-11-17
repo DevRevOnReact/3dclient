@@ -43,8 +43,8 @@
 .popular__card {
 	display: flex;
 	flex-direction: column;
-	background: #0D0D0D;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	width: 260px;
 	.like__container {
 		display: flex;
 		flex-direction: row;

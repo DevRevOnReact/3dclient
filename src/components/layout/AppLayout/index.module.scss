@@ -10,13 +10,13 @@
 	weight: 400
 }
 
-.container {
+// .container {
 
-}
+// }
 
-.container > * {
+// .container > * {
 
-}
+// }
 
 .container > footer {
 	margin-top: auto;
@@ -24,17 +24,16 @@
 }
 
 .header {
-	background:#242424;
-	width: 1160px;
-	margin-left: 140px;
-	margin-right: 140px;
-	margin-bottom: 132px;
+    margin-left: 140px; 
+    margin-right: 140px; 
 }
 
 .nav_links {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 1160px;
+	background:#242424;
 	padding: 25px 50px;
 }
 

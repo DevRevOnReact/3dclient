@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { productData } from '@/pages/Product/config';
 import Modal from '@/pages/ui/Modal/Modal';
@@ -12,6 +12,15 @@ const Popular = () => {
 	const [isModalOpen, setModalOpen] = useState<boolean>(false);
 	const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null);
 	const [searchText, setSearchText] = useState<string>('');
+	const [pageBackgroundColor, setPageBackgroundColor] = useState('');
+
+	useEffect(() => {
+		// Определите цвет фона страницы и обновите значение state
+		const {body} = document;
+		const computedStyles = window.getComputedStyle(body);
+		const {backgroundColor} = computedStyles;
+		setPageBackgroundColor(backgroundColor);
+	  }, []); // [] означае;
 
 	const filteredData = popularData.filter((item) =>
 		item.description.toLowerCase().includes(searchText.toLowerCase())
@@ -21,6 +30,7 @@ const Popular = () => {
 		setSelectedItemIndex(index);
 		setModalOpen(true);
 	};
+	
 
 	return (
 		<>
@@ -29,7 +39,12 @@ const Popular = () => {
 				<div className={cx('popular__container')}>
 					<div className={cx('popular__cards')}>
 						{filteredData.map((item, index) => (
-							<PopulateItem key={index} item={item} onOpenModal={() => {handleOpenModal(index)}} />
+							 <PopulateItem
+							 key={index}
+							 item={item}
+							 onOpenModal={() => { handleOpenModal(index); }}
+							 backgroundColor={pageBackgroundColor === '#0D0D0D' ? '#0D0D0D' : '#0D0D0D'}
+						   />
 						))}
 					</div>
 				</div>
