@@ -6,6 +6,7 @@ import { popularData } from '@/pages/ui/Popular/config';
 import PopulateItem from "@/pages/ui/Popular/PopularItem";
 
 import cx from './style.module.scss';
+import { Container } from '../Container/Container';
 
 
 const Popular = () => {
@@ -33,8 +34,10 @@ const Popular = () => {
 	
 
 	return (
-		<>
+		<main style={{background:'#242424'}}>
+		<Container>
 			<div className={cx('popular')}>
+				
 				<h1 className={cx('popular__title')}>Popular</h1>
 				<div className={cx('popular__container')}>
 					<div className={cx('popular__cards')}>
@@ -48,9 +51,11 @@ const Popular = () => {
 						))}
 					</div>
 				</div>
+				
 			</div>
+			</Container>
 			<Modal isOpen={isModalOpen} onClose={() => {setModalOpen(false)}} productData={productData} displayIndex={selectedItemIndex} />
-		</>
+		</main>
 	);
 };
 

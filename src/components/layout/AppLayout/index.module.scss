@@ -23,16 +23,22 @@
 
 }
 
-.header {
-    margin-left: 140px; 
-    margin-right: 140px; 
+.header__container{
+	margin-inline: 20px;
+
+	@media (min-width: 768px) {
+		max-width: 83.3%;
+		margin: 0 auto;
+		padding-inline: 0;
+	}
 }
+
 
 .nav_links {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 1160px;
+	width: fluid(360, 1160); 
 	background:#242424;
 	padding: 25px 50px;
 }
@@ -59,9 +65,7 @@
 .header__main{
 	display: flex;
 	flex-direction: row;
-	margin-left: 110px;
-	margin-right: 140px;
-
+	margin-left: -33px;
 	.header__left{
 		display: flex;
 		align-items: center;

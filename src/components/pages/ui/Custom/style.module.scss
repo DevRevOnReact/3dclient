@@ -14,6 +14,7 @@
 .custom {
     display: flex;
     flex-direction: row;
+    width: fluid(360, 1160); 
     justify-content: space-between;
     align-items: center;
     padding-top:50px ;

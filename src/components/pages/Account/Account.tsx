@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 import cx from './style.module.scss';
+import { Container } from "../ui/Container/Container";
 
 
 const Account = () => (
 	<>
+	<Container>
 		<main className={cx('account')}>
 			<div className={cx('accountTitle')}>
 				<h1>Account Settings</h1>
@@ -103,6 +105,7 @@ const Account = () => (
 				</div>
 			</div>
 		</section>
+		</Container>
 	</>
 );
 

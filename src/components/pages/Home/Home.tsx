@@ -1,14 +1,11 @@
-
-
-import {popularData} from "@/pages/ui/Popular/config";
-import Popular from "../ui/Popular/Popular";
 import PopulateItem from "../ui/Popular/PopularItem";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Modal from "../ui/Modal/Modal";
 import { HomeData, popularHomeData } from "./config";
 import Custom from "../ui/Custom/Custom";
-
+import { Container } from "../ui/Container/Container";
+import cx from './style.module.scss'
 
 const HomePage = () => {
 	const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -29,14 +26,17 @@ const HomePage = () => {
 	
 	return (
 		<>
-			<Custom title={'Product on Sale'} />
-	<main style={{width:'1 auto', marginLeft:'140px', marginRight:'140px', paddingBottom:'71px'}}>
+<Container>
+	<Custom title={'Product on Sale'} />
+	<main className={cx('home')}>
 		<div  
 		 style={{
             display: "flex",
             flexWrap: "wrap",
             gap: "40px",
             justifyContent: "center",
+			
+			paddingBottom:'100px'
           }}
 		>
   		{filteredData.map((item, index) => (
@@ -50,9 +50,12 @@ const HomePage = () => {
 						))}
 		</div>
 	</main>
+	</Container>
+	
 	<div style={{ background:'#242424', paddingBottom:'91px'}}>
+	<Container>
 	<Custom title={'New product'} />
-	<main style={{width:'1 auto', marginLeft:'140px', marginRight:'140px'}}>
+	<main className={cx('home')}>
 		<div  
 		 style={{
             display: "flex",
@@ -71,8 +74,10 @@ const HomePage = () => {
 						))}
 		</div>
 	</main>
+	</Container>
 	</div>
 	<Modal isOpen={isModalOpen} onClose={() => {setModalOpen(false)}} productData={HomeData} displayIndex={selectedItemIndex} />
+	
 	</>
 );
 

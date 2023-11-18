@@ -1,15 +1,13 @@
 .support{
 	margin-top: 132px;
-	margin-left: 140px;
-	margin-right: 140px;
-
+	width: fluid(360, 1160);
 	.support__container{
 		background: #242424;
 		display: flex;
 		justify-content: center;
 		padding-bottom:100px;
 		.support__content{
-			width: 776px;
+			width:fluid(360, 776);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;

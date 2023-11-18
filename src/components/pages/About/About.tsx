@@ -1,8 +1,10 @@
+import { Container } from '../ui/Container/Container';
 import cx from './style.module.scss';
 import Image from "next/image";
 
 
 const About = () => (
+	<Container>
 	<main className={cx('about')}>
 		<div className={cx('about__container')}>
 			<h1 className={cx('about__title')}>ABOUT</h1>
@@ -37,6 +39,7 @@ const About = () => (
 				</div>
 			</div>
 	</main>
+	</Container>
 );
 
 export { About };

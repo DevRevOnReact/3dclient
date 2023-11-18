@@ -1,6 +1,8 @@
+import { Container } from '../ui/Container/Container';
 import cx from './style.module.scss';
 
 const Support = () => (
+	<Container>
 	<main className={cx('support')}>
 		<div className={cx('support__container')}>
 			<div className={cx('support__content')}>
@@ -36,6 +38,7 @@ const Support = () => (
 			</div>
 		</div>
 	</main>
+	</Container>
 );
 
 export { Support };

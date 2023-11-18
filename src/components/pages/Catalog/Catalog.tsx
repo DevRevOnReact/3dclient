@@ -5,8 +5,11 @@ import {catalogData} from "@/pages/Catalog/config";
 import Popular from "@/pages/ui/Popular/Popular";
 
 import cx from './style.module.scss';
+import { Container } from "../ui/Container/Container";
 
 const Catalog = () => (
+	<>
+	<Container>
 	<main className={cx('catalog')}>
 		<section className={cx('catalog__layout')}>
 		<section className={cx('catalog__main')}>
@@ -62,8 +65,11 @@ const Catalog = () => (
 			</div>
 		</section>
 </section>
-		<Popular />
+		
 	</main>
+	</Container>
+	<Popular />
+	</>
 );
 
 export { Catalog };

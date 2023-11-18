@@ -5,9 +5,11 @@ import Slider from "@/pages/ui/Double";
 
 import cx from './style.module.scss';
 import Popular from "../ui/Popular/Popular";
+import { Container } from "../ui/Container/Container";
 
 const Product = () => (
 		<>
+		<Container>
 			<div className={cx('product')}>
 				<div className={cx('product__main')}>
 					<Slider/>
@@ -44,7 +46,9 @@ const Product = () => (
 					</div>
 				</div>
 			</div>
+			</Container>
 			<Popular />
+			
 		</>
 	)
 

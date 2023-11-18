@@ -11,6 +11,7 @@ import Search from "@/pages/ui/Search/Search";
 import cx from './../index.module.scss';
 import type {SearchResultType} from "@/pages/ui/Search/types";
 
+
 export const Header = () => {
 	const {t} = useTranslation(['common']);
 	const [searchResults, setSearchResults] = useState<SearchResultType[]>([]); // Specify SearchResultType
@@ -20,7 +21,9 @@ export const Header = () => {
 	};
 
 	return (
-		<header>
+		<>
+		<header className={cx('header__container')}>
+
 			<div className={cx('header__main')}>
 				<div className={cx('header__left')}>
 					<Search data={catalogsData} onSearchResults={handleSearchResults}
@@ -41,6 +44,8 @@ export const Header = () => {
 					<Link href="#">Furniture</Link>
 				</div>
 			</div>
+		
 		</header>
+		</>
 	);
 };
