@@ -149,7 +149,9 @@
 				flex-shrink: 0;
 				border-radius: 19.032px;
 				background: #FF2750;
-				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				&:hover{
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;	
+				}
 				cursor: pointer;
 				p{
 					color: #FFF;
@@ -174,7 +176,9 @@
 				flex-shrink: 0;
 				border-radius: 19.032px;
 				border: 1.903px solid var(--Style, #FF2750);
-				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				&:hover{
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;	
+				}
 				cursor: pointer;
 				p{
 					color: #FFF;
@@ -350,7 +354,9 @@
 				flex-shrink: 0;
 				border-radius: 19.032px;
 				background: #FF2750;
-				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				&:hover{
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;	
+				}
 				cursor: pointer;
 				p{
 					color: #FFF;
@@ -375,7 +381,9 @@
 				flex-shrink: 0;
 				border-radius: 19.032px;
 				border: 1.903px solid var(--Style, #FF2750);
-				box-shadow: 0px 0px 57.09677px 0px #FF2750;
+				&:hover{
+					box-shadow: 0px 0px 57.09677px 0px #FF2750;	
+				}
 				cursor: pointer;
 				p{
 					color: #FFF;

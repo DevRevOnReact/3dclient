@@ -40,7 +40,7 @@
 	align-items: center;
 	width: fluid(360, 1160); 
 	background:#242424;
-	padding: 25px 50px;
+
 }
 
 .nav_links a {
@@ -66,6 +66,7 @@
 	display: flex;
 	flex-direction: row;
 	margin-left: -33px;
+
 	.header__left{
 		display: flex;
 		align-items: center;
@@ -112,4 +113,12 @@
 		}
 
 	}
+}
+
+.nav__btn{
+	background-color: #FF2750;
+	display: flex;
+	justify-content: center;
+	width: 100px;
+	height: 80px;
 }

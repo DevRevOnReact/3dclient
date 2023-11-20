@@ -9,6 +9,7 @@ import PopularItem from "@/pages/ui/Popular/PopularItem";
 import type {SearchResultType} from "@/pages/ui/Search/types";
 import Image from "next/image";
 
+
 interface SearchProps {
 	data: Array<{
 		imageSrc: string;
@@ -111,10 +112,13 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 	  const handleLinkClick = () => {
 		clearSearchResults();
 	  };
+
 	
 	return (
 		<div>
+			
 			<div style={{display: 'flex'}}>
+				<Link href={'/'}>
 				<Image
 						alt="fsfdsf"
 						src="/images/LogoFull.png"
@@ -126,6 +130,7 @@ const Search: React.FC<SearchProps> = ({ data, onSearchResults }) => {
 				
 						}}
 					/>
+					</Link>
 			<input
 				type="text"
 				value={searchTerm}

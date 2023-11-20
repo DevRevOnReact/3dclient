@@ -26,6 +26,7 @@ const HomePage = () => {
 	
 	return (
 		<>
+	
 <Container>
 	<Custom title={'Product on Sale'} />
 	<main className={cx('home')}>

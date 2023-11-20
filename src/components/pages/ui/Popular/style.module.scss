@@ -138,7 +138,9 @@
 			align-items: center;
 			border-radius: 10px;
 			background: var(--Style, #FF2750);
-			box-shadow: 0px 0px 30px 0px #FF2750;
+			&:hover{
+				box-shadow: 0px 0px 30px 0px #FF2750;
+			  }
 			cursor: pointer;
 
 			p {

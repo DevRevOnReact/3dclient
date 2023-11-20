@@ -1,0 +1,78 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url('./../../../../../public/fonts/Gilroy-Black.ttf');
+	weight: 400
+}
+
+@font-face {
+	font-family: myFirst;
+	src: url('./../../../../../public/fonts/Gilroy-Light.woff');
+	weight: 400
+}
+
+.parentPage {
+  color:  #FF2750;
+  text-align: center;
+  font-family: myFirstFont;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 9999;
+  &:hover{
+    text-shadow: 0px 0px 57.096771240234375px #FF2750;
+  }
+  
+}
+
+.pages{
+  display: flex;
+  flex-direction: column;
+  margin-left: 46px;
+  margin-top: 140px;
+  ul{
+    display: flex;
+    gap: 12px;
+    padding-top: 19px;
+  }
+}
+
+.subpage {
+  color: #FFF;
+  text-align: center;
+  font-family: myFirst;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+ 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 500px;
+  background-color: #0D0D0D;
+  overflow-y: auto;
+  padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.navbar.hidden {
+  transform: translateX(500px);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.page__block{
+  display: flex;
+  flex-direction: column;
+}

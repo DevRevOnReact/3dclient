@@ -43,6 +43,7 @@
 		"pnpm": ">=7.2"
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.4.2",
 		"@mantine/carousel": "^7.2.1",
 		"@mantine/core": "^7.2.1",
 		"@mantine/dropzone": "^7.2.1",
